@@ -20,10 +20,10 @@ class ViewController: UIViewController {
     @IBAction func keyPressed(_ sender: UIButton) {
         playSound(buttonTitle: sender.currentTitle!)
         
-        sender.layer.opacity *= 0.5
+        sender.alpha *= 0.5
         let delayDuration = 0.2
         DispatchQueue.main.asyncAfter(deadline: .now() + delayDuration) {
-            sender.layer.opacity *= 2
+            sender.alpha *= 2
         }
     }
     
